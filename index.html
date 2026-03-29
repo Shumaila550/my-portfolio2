@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shumaila Mujahid — Web Developer</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<canvas id="cur-trail"></canvas>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pl-ring"></div>
+  <div class="pl-logo">Initializing</div>
+  <div class="pl-status" id="pl-status">LOADING SYSTEM...</div>
+  <div class="pl-bar"><div class="pl-fill"></div></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">&lt;AC/&gt;</a>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-status"><div class="nav-dot"></div>AVAILABLE</div>
+    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="three-canvas"></canvas>
+
+  <div class="hero-content">
+    <h1 class="hero-name">Hi, I'm Shumaila</h1>
+    <p class="hero-desc">Web Developer</p>
+
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Hire Me</a>
+      <a href="cv.pdf" download class="btn-secondary">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div id="skills-grid"></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div id="projects-grid"></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div id="services-grid"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-form">
+    <input type="text" placeholder="Your name">
+    <input type="email" placeholder="Your email">
+    <textarea placeholder="Message"></textarea>
+    <button onclick="handleSubmit(this)">Send</button>
+  </div>
+</section>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
