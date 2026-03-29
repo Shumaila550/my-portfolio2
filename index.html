@@ -6,12 +6,10 @@
   <title>Shumaila Mujahid — Web Developer</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans&family=DM+Mono&display=swap" rel="stylesheet">
 
   <!-- Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -19,35 +17,26 @@
 
 <body>
 
-<!-- CURSOR -->
+<!-- Cursor -->
 <div id="cur-dot"></div>
 <div id="cur-ring"></div>
 <canvas id="cur-trail"></canvas>
 
-<!-- PRELOADER -->
+<!-- Preloader -->
 <div id="preloader">
   <div class="pl-ring"></div>
-  <div class="pl-logo">Initializing</div>
-  <div class="pl-status" id="pl-status">LOADING SYSTEM...</div>
-  <div class="pl-bar"><div class="pl-fill"></div></div>
+  <div class="pl-status" id="pl-status">Loading...</div>
 </div>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">&lt;AC/&gt;</a>
+  <a class="nav-logo">&lt;SM/&gt;</a>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
-
-  <div class="nav-right">
-    <div class="nav-status"><div class="nav-dot"></div>AVAILABLE</div>
-    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
-  </div>
+  <button onclick="toggleTheme()">🌙</button>
 </nav>
 
 <!-- HERO -->
@@ -55,13 +44,9 @@
   <canvas id="three-canvas"></canvas>
 
   <div class="hero-content">
-    <h1 class="hero-name">Hi, I'm Shumaila</h1>
-    <p class="hero-desc">Web Developer</p>
-
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Hire Me</a>
-      <a href="cv.pdf" download class="btn-secondary">Download CV</a>
-    </div>
+    <h1 class="hero-name">Shumaila</h1>
+    <p id="typing-text"></p>
+    <a href="#contact" class="btn-primary">Hire Me</a>
   </div>
 </section>
 
@@ -86,17 +71,14 @@
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-
-  <div class="contact-form">
-    <input type="text" placeholder="Your name">
-    <input type="email" placeholder="Your email">
-    <textarea placeholder="Message"></textarea>
-    <button onclick="handleSubmit(this)">Send</button>
-  </div>
+  <button onclick="handleSubmit(this)">Send Message</button>
 </section>
 
 <!-- JS -->
-<script src="script.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/three.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
