@@ -1,4 +1,14 @@
-// THEME TOGGLE
+// INIT ALL
+window.onload = () => {
+  renderSkills();
+  renderProjects();
+  renderServices();
+  initThree();
+
+  document.getElementById("preloader").style.display = "none";
+};
+
+// THEME
 function toggleTheme() {
   const html = document.documentElement;
   html.dataset.theme =
@@ -13,12 +23,12 @@ function handleSubmit(btn) {
   }, 1500);
 }
 
-// SAMPLE DATA
-const skills = ["HTML", "CSS", "JavaScript", "React"];
-const grid = document.getElementById("skills-grid");
+// TYPING EFFECT
+const roles = ["Developer", "Designer", "Freelancer"];
+let i = 0;
 
-skills.forEach(skill => {
-  const div = document.createElement("div");
-  div.textContent = skill;
-  grid.appendChild(div);
-});
+setInterval(() => {
+  document.getElementById("typing-text").textContent =
+    roles[i];
+  i = (i + 1) % roles.length;
+}, 2000);
